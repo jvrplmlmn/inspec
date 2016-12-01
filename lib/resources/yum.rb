@@ -105,7 +105,7 @@ module Inspec::Resources
     end
   end
 
-  class YumRepo
+  class YumRepo < Yum
     def initialize(yum, reponame)
       @yum = yum
       @reponame = reponame
