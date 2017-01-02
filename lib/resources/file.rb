@@ -39,7 +39,7 @@ module Inspec::Resources
     def initialize(path)
       # select permissions style
       @perms_provider = select_file_perms_style(inspec.os)
-      @file = inspec.backend.file(path)
+      @file = inspec.backend.file(File.expand_path(path))
     end
 
     %w{
